@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的信息</title>
+</head>
+<body>
+<div>
+  <div class="main-header">
+    <div class="container">
+      <h1>我的个人信息</h1>
+    </div>
+  </div>
+  <div>
+    <p>基本信息</p>
+    <p>兴趣爱好</p>
+    <p>课程信息</p>
+  </div>
+</div>
+</body>
+</html>
+<script>
+//声明并定义变量
+
+var name = '郎建军';
+var age = 43;
+var height = 171, weight = 129;
+var isMan = true;
+var student = false;
+var xinshengUserName = '郎建军';
+var wechat_user_name = 'langjj126';
+var locaitonBase = '广州';
+var company = locaitonBase + '飞机维修公司';
+var myLikeColorsList = ['blue', 'green', 'yellow', 'red'];
+var myLikeFoods = ['卤面', '炸酱面', '饺子', '烙饼', '面包', '沙拉', '牛排'];
+
+//声明并定义对象变量
+var myJavaScriptLessionInfoObj = {
+  teacher: '徐高阳',
+  teacherWeChat: 'xugy0926',
+  title: 'JavaScript编程入门',
+  beginTime: '2018/8/8',
+  endTime: '2018/9/4',
+  boysStudent: 417,
+  girlsStudent: 119,
+  lessionTarget: '学习JavaScript，学会编程思想，用电脑解决重复性的问题',
+  githubUrl: 'https://github.com/langjj/getting-started-with-javascript'
+};
+
+/*
+* 输出个人信息
+* 输出个人信息时，必要信息要求加辅助提示语
+*/
+
+console.log('姓名');
+console.log(name);
+
+console.log("年龄: " + age);
+console.log('身高 = ' + height + ', 体重 = ' + weight);
+console.log('地点: ' + locaitonBase);
+console.log('公司: ' + company);
+
+console.log('\n');
+
+console.log('----我喜欢的颜色----');
+
+console.log('我总共喜欢 ' + myLikeColorsList.length + ' 种颜色');
+// 根据游标访问数据的内容，数组的游标从0开始
+console.log(myLikeColorsList[0]);
+console.log(myLikeColorsList[1]);
+console.log(myLikeColorsList[2]);
+console.log(myLikeColorsList[3]);
+
+console.log('--------------------');
+
+console.log('\n');
+
+console.log('----我喜欢的食物----');
+console.log('我总共喜欢 ' + myLikeFoods.length + ' 种食物');
+
+// for 循环
+for (var i = 0; i < myLikeFoods.length; i++) {
+  console.log(myLikeFoods[i]);
+}
+
+console.log('--------------------');
+console.log('\n');
+console.log('JavaScript课程信息');
+console.log(myJavaScriptLessionInfoObj);
+
+console.log('\n');
+console.log('#####################');
+console.log('我是分界线')
+console.log('#####################');
+// 用上面定义的变量重新打包，并定义出xiaoming这边变量
+
+var laolang = {
+  name: name,
+  config: {
+    age: age,
+    height: height,
+    weight: weight,
+    isMan: isMan,
+    student: student
+  },
+  like: {
+    myLikeColorsList: myLikeColorsList,
+    myLikeFoods: myLikeFoodsList
+  },
+  work: {
+    locaitonBase: locaitonBase,
+    company: company
+  },
+  myJavaScriptLessionInfoObj: myJavaScriptLessionInfoObj
+}
+
+console.log(laolang);
+</script>
